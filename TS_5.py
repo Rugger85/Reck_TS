@@ -139,7 +139,7 @@ def login():
 
     else:
         # change folder
-        df = pd.read_excel(r"D:\Timesheets\app\users_db.xlsx")
+        df = pd.read_excel("users_db.xlsx")
         fullname = st.text_input("Full Name")
         email = st.text_input("Email address")
         username = st.text_input("Username")
@@ -251,7 +251,7 @@ def login():
                     new_entry = {"Username": username, "email": email, "Pwd": password, "Designation": title, "Manager": manager, "Joining Date": joining, "Employee No": new_emp_no, "Full Name": fullname}
                     users.loc[len(users)] = new_entry
                     # change folder
-                    users.to_excel(r"D:\Timesheets\app\users_db.xlsx", index=False)
+                    users.to_excel("users_db.xlsx", index=False)
                     st.success("Registration Successful")
                 else:
                     st.error("User already exists!")
@@ -306,7 +306,7 @@ def authenticated_page():
     if 'user' in st.session_state:
         user = st.session_state['user']
         # change folder
-        file_path = f"D:\\Timesheets\\app\\{user}.xlsx"
+        file_path = f"{user}.xlsx"
         if os.path.exists(file_path):
             table = pd.read_excel(file_path)
             
@@ -499,7 +499,7 @@ def authenticated_page():
                 
                 if st.button("Save"):
                     # change folder
-                    file_path = f"D:\\Timesheets\\app\\{user}.xlsx"  
+                    file_path = f"{user}.xlsx"  
                     
                     if os.path.exists(file_path):
                         existing_data = pd.read_excel(file_path)
@@ -514,7 +514,7 @@ def authenticated_page():
             try:
                 new_file = st.text_input("Enter the path to original file")
                 # change folder
-                file_path = f"D:\\Timesheets\\app\\{user}.xlsx"  
+                file_path = f"{user}.xlsx"  
                 new_file = new_file.strip().strip('"').strip("'")
                 df_1 = pd.read_excel(file_path)
                 df_2 = pd.read_excel(new_file)
@@ -537,7 +537,7 @@ def authenticated_page():
             uploaded_file = st.file_uploader("Choose a file", type=["xlsx"])
 
             # change folder
-            file_path = f"D:\\Timesheets\\app\\{user}.xlsx"    
+            file_path = f"{user}.xlsx"    
 
             if uploaded_file is not None:
                 if os.path.exists(file_path):
@@ -843,7 +843,7 @@ def authenticated_page():
                     st.write("")
                 try:
                     # change folder
-                    file_path = f"D:\\Timesheets\\app\\{s_1}.xlsx"  
+                    file_path = f"{s_1}.xlsx"  
                     
                     dataset = pd.read_excel(file_path)
                     dataset['Date'] = pd.to_datetime(dataset['Date'], errors='coerce')
@@ -1091,7 +1091,7 @@ def authenticated_page():
         elif menu_choice == "Edit entry":
             st.header("Edit Entry")
             # change folder
-            file_path = f"D:\\Timesheets\\app\\{user}.xlsx"    
+            file_path = f"{user}.xlsx"    
             entities = ['BKL', 'Reckoner']
 
             if os.path.exists(file_path):
@@ -1342,7 +1342,7 @@ def authenticated_page():
                 
                 if st.button("Save"):
                     # change folder
-                    file_path = f"D:\\Timesheets\\app\\{user}.xlsx"  
+                    file_path = f"{user}.xlsx"  
                     
                     if os.path.exists(file_path):
                         existing_data = pd.read_excel(file_path)
@@ -1373,7 +1373,7 @@ def authenticated_page():
                     }
                 }
                 # change folder
-                file_path = f"D:\\Timesheets\\app\\{user}.xlsx" 
+                file_path = f"{user}.xlsx" 
                 dataset = pd.read_excel(file_path)
 
 
@@ -1613,7 +1613,7 @@ def authenticated_page():
         elif menu_choice == "Edit entry":
             st.header("Edit Entry")
             # change folder
-            file_path = f"D:\\Timesheets\\app\\{user}.xlsx"   
+            file_path = f"{user}.xlsx"   
             entities = ['BKL', 'Reckoner']
 
             if os.path.exists(file_path):
