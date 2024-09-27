@@ -31,13 +31,13 @@ hide_streamlit_style = """
 
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # change folder
-users = pd.read_excel(r"D:\Timesheets\app\users_db.xlsx")
+users = pd.read_excel("users_db.xlsx")
 # change folder
-clients = pd.read_excel(r"D:\Timesheets\app\clients.xlsx", sheet_name='Client', dtype=str)
+clients = pd.read_excel("clients.xlsx", sheet_name='Client', dtype=str)
 # change folder
-work_area = pd.read_excel(r"D:\Timesheets\app\clients.xlsx", sheet_name='Work_Area', dtype=str)
+work_area = pd.read_excel("clients.xlsx", sheet_name='Work_Area', dtype=str)
 # change folder
-TOA = pd.read_excel(r"D:\Timesheets\app\clients.xlsx", sheet_name='Type_of_assignment', dtype=str)
+TOA = pd.read_excel("clients.xlsx", sheet_name='Type_of_assignment', dtype=str)
 
 def authenticate(username_or_email, password):
     for index, row in users.iterrows():
