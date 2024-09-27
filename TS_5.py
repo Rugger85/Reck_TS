@@ -93,7 +93,7 @@ def login():
     
     st.markdown(page_bg_css, unsafe_allow_html=True)
     # change folder
-    logo_path = r"D:\Timesheets\app\Final_logo_ver_1_white-01.png" 
+    logo_path = "Final_logo_ver_1_white-01.png" 
     image = Image.open(logo_path)   
     st.markdown(f'''
         <div class="logo-container">
@@ -289,7 +289,7 @@ def authenticated_page():
     </style>
     """
     # change folder
-    logo_path = r"D:\Timesheets\app\Final_logo_ver_1_white-01.png"  
+    logo_path = "Final_logo_ver_1_white-01.png"  
     image = Image.open(logo_path)   
     
     
