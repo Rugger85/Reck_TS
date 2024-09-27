@@ -10,5 +10,3 @@ openpyxl
 datetime
 matplotlib
 altair
-base64
-io
