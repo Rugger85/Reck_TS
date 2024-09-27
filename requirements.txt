@@ -4,3 +4,5 @@ streamlit==1.36.0
 duckdb
 streamlit_option_menu
 seaborn
+plotly
+plotly.express
