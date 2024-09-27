@@ -31,7 +31,7 @@ hide_streamlit_style = """
 
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # change folder
-users = pd.read_excel("users_db.xlsx")
+users = pd.read_excel("https://github.com/Rugger85/Reck_TS/blob/main/users_db.xlsx")
 # change folder
 clients = pd.read_excel("clients.xlsx", sheet_name='Client', dtype=str)
 # change folder
