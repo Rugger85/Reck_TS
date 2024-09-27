@@ -7,7 +7,6 @@ seaborn
 plotly
 plotly.express
 openpyxl
-os
 warnings
 re
 datetime
