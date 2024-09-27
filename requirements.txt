@@ -8,9 +8,8 @@ plotly
 plotly.express
 openpyxl
 datetime
-matplotlib.pyplot
+matplotlib
 altair
-plotly.graph_objects 
 PIL
 base64
 io
